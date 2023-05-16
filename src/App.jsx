@@ -23,11 +23,8 @@ export default function App() {
     setFotos(photos)
   }
   const toggleUser = (id) => {
-    // identificar usuario
     const index = fotos.findIndex((foto) => foto.id === id);
-    // cambiar su estado
     fotos[index].favorito = !fotos[index].favorito;
-    // guardar usuario y su nuevo estado
     setFav([...fotos])
   };
   
@@ -37,12 +34,9 @@ export default function App() {
   
   const [fotos,setFotos] = useState(photos)
   const [ fav, setFav] = useState("")
-  console.log(fotos)
-  console.log("console.log de fav",fav)
   return (
     <div className="App">
       <MyContext.Provider value={{fotos, setFotos,fav, setFav,toggleUser}} >
-
       <BrowserRouter>
         <Navbar />
 

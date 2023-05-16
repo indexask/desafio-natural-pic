@@ -5,7 +5,6 @@ import { useContext } from "react";
 
 export default function Home() {
   const {fotos, setFotos} = useContext(MyContext)
-  const { fav, setFav} = useContext(MyContext)
   const { toggleUser} = useContext(MyContext)
   return (
       fotos.map((p) => {
@@ -17,9 +16,9 @@ export default function Home() {
               className="foto "
               style={{backgroundImage: `url(${p.src})` }}
               >
-              </div>
               <Heart filled={p.favorito} />
               <p>{p.desc}</p>
+              </div>
             </div>
           );
         })

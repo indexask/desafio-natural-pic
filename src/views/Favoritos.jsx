@@ -24,9 +24,9 @@ export default function Favoritos() {
                   className="foto"
                   style={{backgroundImage: `url(${p.src})` }}
                   >
-                  </div>
                   <Heart filled={p.favorito} />
                   <p>{p.desc}</p>
+                  </div>
                 </div>
               );
             })
