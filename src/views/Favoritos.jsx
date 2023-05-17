@@ -13,14 +13,14 @@ export default function Favoritos() {
       <div>
         <h1>Fotos favoritas</h1>
         <div className="p-3">
-          <div>
+          <div className=" galeria grid-columns-4 p-3" >
            {fotos
            .filter((u) => u.favorito == true)
             .map((p) => {
               return (
-                <div className="galeria grid-columns-4 p-3">
+                <div  key={p.id}>
                   <div onClick={()=> toggleUser(p.id)}
-                  key={p.id}
+                  
                   className="foto"
                   style={{backgroundImage: `url(${p.src})` }}
                   >

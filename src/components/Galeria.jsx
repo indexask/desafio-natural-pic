@@ -9,9 +9,8 @@ export default function Home() {
   return (
       fotos.map((p) => {
           return (
-            <div className="galeria grid-columns-4 p-3">
+            <div key={p.id}>
               <div 
-              key={p.id}
               onClick={()=> toggleUser(p.id)}
               className="foto "
               style={{backgroundImage: `url(${p.src})` }}
