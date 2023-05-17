@@ -7,10 +7,10 @@ import Home from "./views/Home";
 import Favoritos from "./views/Favoritos";
 import MyContext from "./MyContext";
 import { useEffect, useState } from "react";
-import {photos} from '../public/fotos.json'
+import {photos} from '../src/fotos.json'
 
 export default function App() {
-  const endpoint = "/fotos.json";
+  const endpoint = "../src/fotos.json";
   const getFotosNaturales = async () => {
     const res = await fetch(endpoint);
     let { photos} = await res.json();
